@@ -4,9 +4,6 @@ import AppReducer from "./AppReducer";
 const localStorageTransactions = JSON.parse(
   localStorage.getItem("transactions")
 );
-console.log("yes");
-console.log(localStorage.getItem("transactions"));
-console.log(localStorage.getItem("transactions") == null);
 
 // Initial State
 const initialState = {

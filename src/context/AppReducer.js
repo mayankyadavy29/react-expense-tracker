@@ -4,7 +4,7 @@ export default (state, action) => {
       const newStateAfterDelete = {
         ...state,
         transactions: state.transactions.filter(
-          (transaction) => transaction.id != action.payload
+          (transaction) => transaction.id !== action.payload
         ),
       };
       updateLocalStorage(newStateAfterDelete.transactions);
