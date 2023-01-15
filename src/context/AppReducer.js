@@ -1,4 +1,4 @@
-export default (state, action) => {
+function AppReducer(state, action) {
   switch (action.type) {
     case "DELETE_TRANSACTION":
       const newStateAfterDelete = {
@@ -20,7 +20,8 @@ export default (state, action) => {
     default:
       return state;
   }
-};
+}
+export default AppReducer;
 
 function updateLocalStorage(transactions) {
   localStorage.setItem("transactions", JSON.stringify(transactions));
